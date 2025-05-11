@@ -58,7 +58,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.Activi
                 boolean checked = ((CheckBox) v).isChecked();
                 Context context = v.getContext();
 
-                if (checked) {
+                if (checked && activity.getRelaxationMinutes() > 0) {
                     showFloatingCountdown((ViewGroup) holder.itemView, activity.getRelaxationMinutes(), context);
                 }
             });
